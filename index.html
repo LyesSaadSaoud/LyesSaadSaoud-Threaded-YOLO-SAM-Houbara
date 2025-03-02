@@ -37,7 +37,7 @@
     /* Resize videos */
     video {
       width: 100%;
-      max-width: 300px;
+      max-width: 250px;  /* Adjust size */
       border-radius: 10px;
       display: block;
     }
@@ -57,7 +57,7 @@
     .video-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 0px; /* Remove space between videos */
       justify-items: center;
       align-items: center;
     }
@@ -76,6 +76,16 @@
       padding: 10px 15px;
     }
   </style>
+
+  <script>
+    // Ensure all videos start together
+    document.addEventListener("DOMContentLoaded", function() {
+      let videos = document.querySelectorAll("video");
+      videos.forEach(video => {
+        video.play();
+      });
+    });
+  </script>
 
 </head>
 <body>
@@ -111,46 +121,34 @@
   </div>
 </section>
 
-<!-- Video Section (2x2 Grid Layout) -->
+<!-- Video Section (2x2 Grid Layout, Auto-Play, Loop) -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Demo Videos</h2>
     <div class="video-grid">
       <!-- Video 1 -->
-      <div>
-        <video controls>
-          <source src="images/Input_video_5fps_compressed.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p>Houbara detection in desert terrain.</p>
-      </div>
+      <video autoplay loop muted playsinline>
+        <source src="images/Input_video_5fps_compressed.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
 
       <!-- Video 2 -->
-      <div>
-        <video controls>
-          <source src="images/video_5fps_compressed.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p>Real-time segmentation of multiple birds.</p>
-      </div>
+      <video autoplay loop muted playsinline>
+        <source src="images/video_5fps_compressed.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
 
       <!-- Video 3 -->
-      <div>
-        <video controls>
-          <source src="images/Input_video_12fps_compressed.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p>Threading Model Efficiency.</p>
-      </div>
+      <video autoplay loop muted playsinline>
+        <source src="images/Input_video_12fps_compressed.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
 
       <!-- Video 4 -->
-      <div>
-        <video controls>
-          <source src="images/video_12fps_compressed.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p>Houbara Bustard Multi-Segmentation.</p>
-      </div>
+      <video autoplay loop muted playsinline>
+        <source src="images/video_12fps_compressed.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 </section>
