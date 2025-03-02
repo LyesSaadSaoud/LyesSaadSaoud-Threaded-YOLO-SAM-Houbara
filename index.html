@@ -1,100 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
   <meta name="description" content="Real-Time Threaded Houbara Detection and Segmentation for Wildlife Conservation using Mobile Platforms">
   <meta property="og:title" content="Real-Time Threaded Houbara Detection and Segmentation"/>
-  <meta property="og:description" content="A two-stage deep learning framework integrating YOLOv10 and MobileSAM for real-time Houbara Bustard detection and segmentation with optimized threading techniques."/>
-  <meta property="og:image" content="static/images/Houbara_detection.png" />
+  <meta property="og:description" content="A deep learning framework integrating YOLOv10 and MobileSAM with threading techniques for real-time Houbara Bustard detection and segmentation."/>
+  <meta property="og:url" content="https://lyessaadsaoud.github.io/Houbara_Detection"/>
+  <meta property="og:image" content="static/image/Houbara_detection.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="Real-Time Threaded Houbara Detection"/>
+  <meta name="twitter:description" content="YOLOv10 and MobileSAM integration with threading for real-time Houbara Bustard monitoring on mobile platforms.">
+  <meta name="twitter:image" content="static/images/Houbara_detection.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="Houbara Detection, Wildlife Conservation, Computer Vision, YOLOv10, MobileSAM, Deep Learning, Threading, Mobile Platforms">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Real-Time Threaded Houbara Detection and Segmentation for Wildlife Conservation</title>
   <link rel="icon" type="image/x-icon" href="static/images/houbara_icon.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-
-  <!-- Bulma CSS & Other Styles -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- JavaScript Libraries -->
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script src="static/js/bulma-carousel.min.js"></script>
-
-  <style>
-    h2.title {
-      display: inline-block;
-      text-align: center;
-      white-space: nowrap;
-      word-break: normal;
-      overflow-wrap: break-word;
-    }
-
-    .content p {
-      text-align: justify;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-    }
-
-    .column {
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .container.is-max-desktop {
-      max-width: 1100px;
-    }
-
-    .carousel {
-      width: 100%;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .carousel img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-  </style>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
 </head>
-
 <body>
 
 <!-- Title Section -->
 <section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop has-text-centered">
-      <h1 class="title is-1">Real-Time Threaded Houbara Detection and Segmentation for Wildlife Conservation</h1>
-      <p class="is-size-5">Lyes Saad Saoud, Loïc Lesobre, Enrico Sorato, Yves Hingrat, Lakmal Seneviratne, Irfan Hussain</p>
-      <p class="is-size-5">Khalifa University of Science and Technology, UAE | Preprint 2025</p>
-      <p class="is-size-5"> RENECO International Wildlife Consultants LLC, Abu Dhabi, United Arab Emirates</p>
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Real-Time Threaded Houbara Detection and Segmentation for Wildlife Conservation using Mobile Platforms</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block"><a href="#" target="_blank">Lyes Saad Saoud</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Loïc Lesobre</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Enrico Sorato</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Saud Al Qaydi</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Yves Hingrat</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Lakmal Seneviratne</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Irfan Hussain</a></span>
+            </div>
 
-      <div class="buttons is-centered">
-        <a href="https://arxiv.org/pdf/<ARXIV_PAPER_ID>.pdf" class="button is-dark is-rounded">
-          <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
-        </a>
-        <a href="https://github.com/LyesSaadSaoud/Houbara_Detection" class="button is-dark is-rounded">
-          <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
-        </a>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Khalifa University of Science and Technology, UAE<br>RENECO International Wildlife Consultants LLC, UAE<br>International Fund for Houbara Conservation (IFHC), UAE<br>Preprint 2025</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                   <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/<ARXIV_PAPER_ID>.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://github.com/LyesSaadSaoud/Houbara_Detection" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Code</span>
+              </a>
+            </span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- Teaser Image -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body has-text-centered">
-      <img src="images/main_IJCV.png" alt="Houbara Detection System" style="width: 70%; border-radius: 10px;">
-      <h2 class="subtitle">Framework of the proposed two-stage deep learning approach for real-time Houbara detection and segmentation. 
-        YOLOv10 detects birds, while MobileSAM refines segmentation. Threading techniques optimize parallel processing for real-time applications.</h2>
     </div>
   </div>
 </section>
@@ -108,26 +96,22 @@
         <p>
         <div class="content has-text-justified">
           <p>
-          Real-time animal detection and segmentation in natural environments play an increasingly important role in wildlife conservation, enabling non-invasive monitoring via remote camera streams. However, these tasks remain challenging due to computational constraints and the cryptic appearance of many animal species. To address these limitations, we propose a two-stage deep learning framework optimized for mobile platforms, integrating a Threading Detection Model (TDM) to enable parallel processing of YOLOv10-based detection and MobileSAM-based segmentation. Unlike prior YOLO+SAM approaches, our method enhances real-time performance through task parallelization, reducing inference latency. Our approach employs YOLOv10 for precise animal detection and MobileSAM for efficient segmentation, leveraging threading techniques to process both tasks concurrently. This optimization significantly improves real-time performance on mobile devices by minimizing delays and optimizing resource utilization. We evaluate our framework on the Houbara Bustard, a conservation-priority bird species with a cryptic appearance. Our model achieves a mean average precision (mAP50) of 0.9627, mAP75 of 0.7731, and mAP95 of 0.7178 for detection, while MobileSAM attains a mean Intersection over Union (mIoU) of 0.7421 for segmentation. YOLOv10 processes frames in 43.7ms, while MobileSAM completes segmentation in 107.5ms, demonstrating its suitability for real-time applications. To support our research, we introduce a comprehensive Houbara dataset comprising 40,000 images, addressing a critical gap in conservation AI resources. This dataset covers diverse scenarios, ensuring robust and generalizable model training. Beyond wildlife monitoring, our framework is applicable to real-time object detection and segmentation on resource-constrained devices. By overcoming the challenges associated with cryptic species detection, our work advances computer vision applications in animal behavior analysis and conservation.     </p>
+          Real-time detection and segmentation of wildlife species, particularly cryptic ones like the Houbara Bustard, are essential for conservation. Traditional monitoring techniques face limitations in remote environments, computational constraints, and network latency. To address these challenges, we propose a two-stage deep learning framework optimized for mobile platforms, integrating YOLOv10 for high-accuracy object detection and MobileSAM for efficient segmentation.
+
+          Unlike previous approaches, we introduce a Threading Detection Model (TDM) that enables parallel execution of detection and segmentation tasks, significantly reducing inference latency and improving real-time performance on mobile AI platforms. Our framework leverages multi-threaded processing, optimizing computational efficiency while maintaining high accuracy.
+
+          Evaluated on a 40,000-image dataset specifically curated for Houbara detection and segmentation, our model achieves:
+          - mAP50 of 0.9627  
+          - mAP75 of 0.7731  
+          - mIoU of 0.7421  
+
+          YOLOv10 processes frames in 43.7ms, while MobileSAM completes segmentation in 107.5ms, ensuring near real-time inference.
+
+          Our dataset addresses the scarcity of high-quality conservation AI datasets, filling a gap in automated wildlife monitoring. This research contributes to advancing real-time conservation AI, ecological research, and autonomous species tracking.
+          </p>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- BibTeX Citation -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>
-@article{Houbara2025,
-  author = {Saad Saoud, Lyes et al.},
-  title = {Real-Time Threaded Houbara Detection and Segmentation for Wildlife Conservation},
-  year = {2025},
-  publisher = {Preprint},
-  doi = {......},
-  url = {https://arxiv.org/...}}
-</code></pre>
   </div>
 </section>
 
