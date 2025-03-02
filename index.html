@@ -186,10 +186,12 @@ To support our research, we introduce a comprehensive Houbara dataset comprising
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-This paper introduces SAFARI (Semantic-Aware Framework for Adaptive and Robust Robotic SLAM Implementation), an AI-driven framework tailored for autonomous navigation in complex and dynamic environments. Traditional SLAM systems often face challenges with dynamic objects, reflective surfaces, and ambiguous structures due to their reliance solely on geometric features.
-SAFARI integrates DepthAnythingV2 for real-time depth estimation, CLIP for zero-shot semantic scene understanding, and LLaMA for adaptive optimization. LLaMA enables real-time analysis and dynamic parameter tuning, such as adjusting tracking and mapping iterations based on scene complexity and feature density. A novel semantic-depth fusion module combines semantic insights with geometric data to refine depth maps, optimize keyframe selection, and enhance mapping accuracy.
-The framework is evaluated on the Replica and KU Marine Pool (KUMP) datasets, the latter designed to simulate underwater robotic navigation scenarios with real-world challenges such as low visibility, reflective surfaces, and dynamic currents. SAFARI demonstrates superior performance compared to traditional methods, achieving significant improvements in Absolute Trajectory Error (ATE), Relative Pose Error (RPE), and perceptual mapping metrics.
-While SAFARI showcases robust performance, challenges persist in handling highly reflective surfaces and achieving precise semantic segmentation. Future work will enhance semantic-depth fusion algorithms, integrate advanced segmentation techniques, and expand the KUMP dataset for broader robotic applications. SAFARI represents a significant advancement in AI-powered SLAM, offering an adaptable and reliable solution for autonomous systems in diverse and challenging environments.        </div>
+Real-time animal detection and segmentation in natural environments play an increasingly important role in wildlife conservation, enabling non-invasive monitoring via remote camera streams.
+        However, these tasks remain challenging due to computational constraints and the cryptic appearance of many animal species. address these limitations, we propose a two-stage deep learning framework optimized for mobile platforms, integrating a Threading Detection Model (TDM) to enable parallel processing of YOLOv10-based detection and MobileSAM-based segmentation. Unlike prior YOLO+SAM approaches, our method enhances real-time performance through task parallelization, reducing inference latency. 
+        Our approach employs YOLOv10 for precise animal detection and MobileSAM for efficient segmentation, leveraging threading techniques to process both tasks concurrently. 
+        This optimization significantly improves real-time performance on mobile devices by minimizing delays and optimizing resource utilization.
+We evaluate our framework on the Houbara Bustard, a conservation-priority bird species with a cryptic appearance. Our model achieves a mean average precision (mAP50) of 0.9627, mAP75 of 0.7731, and mAP95 of 0.7178 for detection, while MobileSAM attains a mean Intersection over Union (mIoU) of 0.7421 for segmentation. YOLOv10 processes frames in 43.7ms demonstrating its suitability for real-time applications. 
+To support our research, we introduce a comprehensive Houbara dataset comprising 40,000 images, addressing a critical gap in conservation AI resources. This dataset covers diverse scenarios, ensuring robust and generalizable model training. Beyond wildlife monitoring, our framework is applicable to real-time object detection and segmentation on resource-constrained devices. By overcoming the challenges associated with cryptic species detection, our work advances computer vision applications in animal behavior analysis and conservation.      </h2>
       </div>
     </div>
   </div>
@@ -207,7 +209,7 @@ While SAFARI showcases robust performance, challenges persist in handling highly
           <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
             <img src="static/images/Fig3.png" alt="Visualization of input images, dehazed outputs, and corresponding depth maps" style="max-width: 80%; height: auto; border-radius: 10px;">
             <h2 class="subtitle has-text-centered">
-              <strong>Fig. 3:</strong> Visualization of input images, dehazed outputs, and corresponding depth maps. The first column shows the original input images. The second column presents the dehazed results, and the third column displays the estimated depth maps. These examples highlight improvements in visibility and geometric consistency achieved by the preprocessing and depth estimation steps.
+              <strong>Fig. 3:</strong> Framework of the Proposed Two-Stage Deep Learning Approach for Houbara Detection and Segmentation, incorporating the Threading Detection Model (TDM). The figure illustrates the end-toend process starting from input images, through YOLOv10 for improved Houbara detection, followed by MobileSAM for specialized segmentation. The TDM manages parallel processing, task distribution, and synchronization to enhance real-time performance and efficiency throughout the system..
             </h2>
           </div>
         </div>
@@ -217,71 +219,12 @@ While SAFARI showcases robust performance, challenges persist in handling highly
           <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
             <img src="static/images/Fig4.png" alt="Visualization of the estimated trajectory within the pool environment" style="max-width: 80%; height: auto; border-radius: 10px;">
             <h2 class="subtitle has-text-centered">
-              <strong>Fig. 4:</strong> Visualization of the estimated trajectory within the pool environment. The top-left plot shows the top-down view (X-Y plane), illustrating the horizontal movement of the system. The top-right plot displays the side view (X-Z plane), capturing variations in height along the X-axis. The bottom-left plot presents the front view (Y-Z plane), highlighting vertical movements along the Y-axis. The bottom-right 3D plot provides a comprehensive spatial representation of the trajectory. Color variations across all views represent the frame sequence progression, emphasizing transitions and motion patterns throughout the dataset.
+              <strong>Fig. 4:</strong>.
             </h2>
           </div>
         </div>
 
-        <!-- Image 5 -->
-        <div class="item">
-          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-            <img src="static/images/Fig5.png" alt="Results for Room0 of the Replica dataset using segment masks" style="max-width: 80%; height: auto; border-radius: 10px;">
-            <h2 class="subtitle has-text-centered">
-              <strong>Fig. 5:</strong> Results for Room0 of the Replica dataset using segment masks. The figure showcases ground truth RGB, ground truth depth, rasterized RGB (PSNR: 34.25), rasterized depth (L1: 0.00), rasterized silhouette, and the rasterized semantic map (IoU: 0.8916).
-            </h2>
-          </div>
-        </div>
-
-        <!-- Image 6 -->
-        <div class="item">
-          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-            <img src="static/images/Fig6.png" alt="Results for Room0 of the Replica dataset without using segment masks" style="max-width: 80%; height: auto; border-radius: 10px;">
-            <h2 class="subtitle has-text-centered">
-              <strong>Fig. 6:</strong> Results for Room0 of the Replica dataset without using segment masks. The figure showcases ground truth RGB, ground truth depth, rasterized RGB (PSNR: 20.18), rasterized depth (L1: 0.23), rasterized silhouette, and the depth difference (L1).
-            </h2>
-          </div>
-        </div>
-
-        <!-- Image 7 -->
-        <div class="item">
-          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-            <img src="static/images/Fig7.png" alt="Feature confidence trends over time for the underwater dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
-            <h2 class="subtitle has-text-centered">
-              <strong>Fig. 7:</strong> Feature confidence trends over time for the underwater dataset. The plot illustrates the confidence variations of key features such as underwater camera, marine plants, and coral reef across time indices.
-            </h2>
-          </div>
-        </div>
-
-        <!-- Image 8 -->
-        <div class="item">
-          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-            <img src="static/images/Fig8.png" alt="Top 10 features by average confidence for the underwater dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
-            <h2 class="subtitle has-text-centered">
-              <strong>Fig. 8:</strong> Top 10 features by average confidence for the underwater dataset. The bar plot highlights the dominance of underwater camera and marine plants as the most confident features.
-            </h2>
-          </div>
-        </div>
-
-        <!-- Image 9 -->
-        <div class="item">
-          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-            <img src="static/images/Fig9.png" alt="Confidence heatmap showing the relationship between features and recommendations for the underwater dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
-            <h2 class="subtitle has-text-centered">
-              <strong>Fig. 9:</strong> Confidence heatmap showing the relationship between features and recommendations for the underwater dataset. The heatmap emphasizes high-confidence features and their corresponding recommendations, providing actionable insights for optimizing underwater mapping performance.
-            </h2>
-          </div>
-        </div>
-
-        <!-- Image 10 -->
-        <div class="item">
-          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-            <img src="static/images/Fig10.png" alt="Visualization of ground truth and rasterized data at time step 19" style="max-width: 80%; height: auto; border-radius: 10px;">
-            <h2 class="subtitle has-text-centered">
-              <strong>Fig. 10:</strong> Visualization of ground truth and rasterized data at time step 19. The figure includes ground truth RGB, ground truth depth, rasterized RGB (PSNR: 19.53), rasterized depth (L1: 0.09), rasterized silhouette, and depth difference (L1).
-            </h2>
-          </div>
-        </div>
-
+        
       </div>
     </div>
   </div>
