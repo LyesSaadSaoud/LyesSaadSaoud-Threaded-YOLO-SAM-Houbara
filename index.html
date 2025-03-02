@@ -1,191 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="Real-Time Threaded Houbara Detection and Segmentation using Mobile Platforms">
-  <meta property="og:title" content="Real-Time Threaded Houbara Detection"/>
-  <meta property="og:description" content="A deep learning framework integrating YOLOv10 and MobileSAM for real-time Houbara Bustard detection and segmentation."/>
-  <meta property="og:image" content="static/images/houbara_teaser.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Real-Time Threaded Houbara Detection and Segmentation</title>
-  <link rel="icon" type="image/x-icon" href="static/images/houbara_icon.jpg">
-
-  <!-- Google Fonts for Clean Style -->
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-
-  <style>
-    /* Apply GFN-Like Font */
-    body {
-      font-family: 'Google Sans', 'Noto Sans', sans-serif;
-      color: #222;
-    }
-    
-    .hero-body, .container {
-      text-align: center;
-    }
-
-    /* Title Styling */
-    .title {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #333;
-    }
-
-    /* Subtitle Styling */
-    .subtitle {
-      font-size: 1.2rem;
-      font-weight: 400;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    /* Buttons for Paper & Code */
-    .buttons {
-      margin-top: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .button {
-      font-size: 1rem;
-      font-weight: 500;
-      padding: 10px 18px;
-      border-radius: 6px;
-    }
-
-    /* Video Grid: 2x2 Layout */
-    .video-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5px; /* Minimal space between videos */
-      justify-items: center;
-      align-items: center;
-    }
-
-    /* Adjust Video Size */
-    video {
-      width: 100%;
-      max-width: 200px; /* Smaller videos */
-      border-radius: 8px;
-      display: block;
-      margin: 0; /* Remove extra space */
-    }
-
-    /* Adjust Image Size */
-    img {
-      width: 40%; /* Smaller image */
-      max-width: 400px;
-      height: auto;
-      border-radius: 8px;
-      margin: 10px auto;
-      display: block;
-    }
-  </style>
-
-  <script>
-    // Ensure all videos start together
-    document.addEventListener("DOMContentLoaded", function() {
-      let videos = document.querySelectorAll("video");
-      videos.forEach(video => {
-        video.play();
-      });
-    });
-  </script>
-
-</head>
-<body>
-
-<!-- Title Section -->
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop has-text-centered">
-      <h1 class="title">Real-Time Threaded Houbara Detection and Segmentation for Wildlife Conservation</h1>
-      <p class="subtitle">Lyes Saad Saoud, Loïc Lesobre, Enrico Sorato, Yves Hingrat, Lakmal Seneviratne, Irfan Hussain</p>
-      <p class="subtitle">Khalifa University of Science and Technology, UAE | Preprint 2025</p>
-
-      <!-- Buttons for Paper & Code -->
-      <div class="buttons is-centered">
-        <a href="https://arxiv.org/pdf/<ARXIV_PAPER_ID>.pdf" class="button is-dark is-rounded">
-          <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
-        </a>
-        <a href="https://github.com/LyesSaadSaoud/Houbara_Detection" class="button is-dark is-rounded">
-          <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Teaser Image -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="images/IJCV_main.png" alt="Houbara Detection System">
-      <h2 class="subtitle">The proposed system integrates YOLOv10 and MobileSAM for real-time detection and segmentation of Houbara Bustards in diverse environments.</h2>
-    </div>
-  </div>
-</section>
-
-<!-- Video Section (2x2 Grid Layout, Auto-Play, Loop, No Extra Space) -->
+<!-- Figures Section: Real-time Houbara Analysis -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <h2 class="title has-text-centered">Demo Videos</h2>
-    <div class="video-grid">
-      <!-- Video 1 -->
-      <video autoplay loop muted playsinline>
-        <source src="images/Input_video_5fps_compressed.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-
-      <!-- Video 2 -->
-      <video autoplay loop muted playsinline>
-        <source src="images/video_5fps_compressed.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-
-      <!-- Video 3 -->
-      <video autoplay loop muted playsinline>
-        <source src="images/Input_video_12fps_compressed.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-
-      <!-- Video 4 -->
-      <video autoplay loop muted playsinline>
-        <source src="images/video_12fps_compressed.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</section>
-
-<!-- Abstract Section -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <h2 class="title has-text-centered">Abstract</h2>
+    <h2 class="title has-text-centered">Real-Time Houbara Analysis</h2>
     <p class="subtitle has-text-justified">
-      Real-time animal detection and segmentation play a crucial role in wildlife conservation. Our approach integrates YOLOv10 for object detection and MobileSAM for segmentation, with a threading-based model for improved efficiency. The system achieves high accuracy (mAP50 = 0.9627, mIoU = 0.7421) while enabling real-time performance on mobile devices. We introduce a curated dataset of 40,000 images for conservation AI applications.
+      (a) Input images (first, fourth, and seventh rows). 
+      (b) Predicted instance segmentation masks by MobileSAM (second, fifth, and eighth rows).
+      (c) Combined view: Input images with object detections (bounding boxes) and MobileSAM segmentation masks (third, sixth, and ninth rows).
     </p>
+    <div class="image-container">
+      <img src="images/real_time_houbara_analysis.png" alt="Real-time Houbara Analysis">
+    </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <p class="subtitle">This page provides supplementary materials for "<strong>Real-Time Threaded Houbara Detection</strong>."  
-      Access the <a href="https://arxiv.org/pdf/<ARXIV_PAPER_ID>.pdf" target="_blank">paper</a> and  
-      <a href="https://github.com/LyesSaadSaoud/Houbara_Detection" target="_blank">GitHub repository</a> for more details.</p>
+<!-- Figures Section: Segmentation Comparison -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title has-text-centered">Qualitative Comparison of Segmentation Results</h2>
+    <p class="subtitle has-text-justified">
+      This figure presents a qualitative comparison of segmentation performance across various models. 
+      Each column displays: 
+      (a) Input Images, (b) Ground Truth Annotations, (c) DeepLabV3 Results, (d) FCN Results, 
+      (e) LRASPP Results, (f) MobileSAM Baseline Results, (g) YOLOv9+MobileSAM Results, and 
+      (h) Overlapping Results of YOLOv10+MobileSAM with Input Images. 
+      The overlapping panel highlights the superior object localization and segmentation precision achieved by YOLOv10+MobileSAM.
+    </p>
+    <div class="image-container">
+      <img src="images/segmentation_comparison.png" alt="Qualitative Segmentation Comparison">
+    </div>
   </div>
-</footer>
+</section>
 
-</body>
-</html>
+<!-- Styling for Images -->
+<style>
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .image-container img {
+    width: 60%; /* Adjust image size */
+    max-width: 600px;
+    border-radius: 8px;
+    display: block;
+  }
+</style>
