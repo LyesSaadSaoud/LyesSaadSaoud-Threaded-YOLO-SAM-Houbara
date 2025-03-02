@@ -92,27 +92,26 @@
       display: block;
     }
 
-  /* Video Grid: 2x2 Layout without Extra Space */
+  /* Video Grid: 2x2 Layout Without Any Vertical Space */
 .video-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
-  grid-template-rows: repeat(2, auto); /* Two rows */
-  gap: 0; /* Removes spacing */
-  row-gap: 0; /* Removes vertical space */
-  column-gap: 5px; /* Small space between columns */
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  gap: 0; /* Ensures NO spacing between videos */
+  padding: 0;
+  margin: 0;
 }
 
-/* Video Styling */
+/* Force videos into a 2x2 grid */
 .video-grid video {
-  width: 100%;
-  max-width: 220px; /* Adjust as needed */
+  flex: 1 1 calc(50% - 0px); /* Ensures two videos per row */
+  max-width: 220px; /* Adjust to control size */
   height: auto;
   border-radius: 8px;
-  margin: 0; /* Ensure no extra space */
-  display: block;
+  margin: 0;
   padding: 0;
+  display: block;
 }
 
 
