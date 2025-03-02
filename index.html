@@ -23,6 +23,7 @@
   <script defer src="static/js/fontawesome.all.min.js"></script>
 
   <style>
+    
     /* Apply GFN-Like Font */
     body {
       font-family: 'Google Sans', 'Noto Sans', sans-serif;
@@ -90,6 +91,28 @@
       margin: 10px auto;
       display: block;
     }
+
+  /* Video Grid: 2x2 Layout without Extra Space */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
+  gap: 0px; /* Removes the white space */
+  padding: 0; /* Removes extra padding */
+  margin: 0 auto;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Video Styling */
+.video-grid video {
+  width: 100%;
+  max-width: 220px; /* Adjust to make videos smaller */
+  height: auto;
+  border-radius: 8px;
+  margin: 0; /* Ensure no extra space */
+  display: block;
+}
+
   </style>
 
   <script>
@@ -144,29 +167,26 @@
       <!-- Video 1 -->
       <video autoplay loop muted playsinline>
         <source src="images/Input_video_5fps_compressed.mp4" type="video/mp4">
-        Your browser does not support the video tag.
       </video>
 
       <!-- Video 2 -->
       <video autoplay loop muted playsinline>
         <source src="images/video_5fps_compressed.mp4" type="video/mp4">
-        Your browser does not support the video tag.
       </video>
 
       <!-- Video 3 -->
       <video autoplay loop muted playsinline>
         <source src="images/Input_video_12fps_compressed.mp4" type="video/mp4">
-        Your browser does not support the video tag.
       </video>
 
       <!-- Video 4 -->
       <video autoplay loop muted playsinline>
         <source src="images/video_12fps_compressed.mp4" type="video/mp4">
-        Your browser does not support the video tag.
       </video>
     </div>
   </div>
 </section>
+
 
 <!-- Abstract Section -->
 <section class="section hero is-light">
