@@ -95,10 +95,11 @@
   /* Video Grid: 2x2 Layout without Extra Space */
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
-  gap: 0px; /* Removes the white space */
-  padding: 0; /* Removes extra padding */
-  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-rows: repeat(2, auto); /* Two rows */
+  gap: 0; /* Removes spacing */
+  row-gap: 0; /* Removes vertical space */
+  column-gap: 5px; /* Small space between columns */
   justify-items: center;
   align-items: center;
 }
@@ -106,12 +107,14 @@
 /* Video Styling */
 .video-grid video {
   width: 100%;
-  max-width: 220px; /* Adjust to make videos smaller */
+  max-width: 220px; /* Adjust as needed */
   height: auto;
   border-radius: 8px;
   margin: 0; /* Ensure no extra space */
   display: block;
+  padding: 0;
 }
+
 
   </style>
 
@@ -134,7 +137,7 @@
     <div class="container is-max-desktop has-text-centered">
       <h1 class="title">Real-Time Threaded Houbara Detection and Segmentation for Wildlife Conservation</h1>
       <p class="subtitle">Lyes Saad Saoud, Loïc Lesobre, Enrico Sorato, Yves Hingrat, Lakmal Seneviratne, Irfan Hussain</p>
-      <p class="subtitle">Khalifa University of Science and Technology, UAE<br>RENECO International Wildlife Consultants LLC, UAE<br> | Preprint 2025</p>
+      <p class="subtitle">Khalifa University of Science and Technology, UAE<br>RENECO International Wildlife Consultants LLC, UAE<br>  Preprint 2025</p>
       
       <!-- Buttons for Paper & Code -->
       <div class="buttons is-centered">
