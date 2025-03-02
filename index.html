@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Gated Fusion Network with Reprogramming Transformer Refiners for Adaptive Underwater Image Dehazing">
+  <meta property="og:title" content="Gated Fusion Network for Underwater Image Enhancement"/>
+  <meta property="og:description" content="GFN integrates advanced feature fusion and context-aware adaptive transformations for superior underwater imaging."/>
+  <meta property="og:image" content="static/images/GFN (1).png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Gated Fusion Network with Reprogramming Transformer Refiners for Adaptive Underwater Image Dehazing</title>
+  <link rel="icon" type="image/x-icon" href="static/images/78357759.jpg">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <!-- Bulma CSS & Other Styles -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+
+  <style>
+    /* Prevents unwanted word wrapping on section titles */
+    h2.title {
+      display: inline-block;
+      text-align: center;
+      white-space: nowrap;
+      word-break: normal;
+      overflow-wrap: break-word;
+    }
+
+    /* Ensures paragraphs do not break into vertical letters */
+    .content p {
+      text-align: justify;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* Ensures titles and text stay in a horizontal layout */
+    .column {
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Limits container width to prevent excessive wrapping */
+    .container.is-max-desktop {
+      max-width: 1100px;
+    }
+
+    /* Carousel Styling */
+    .carousel {
+      width: 100%;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Title Section -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h1 class="title is-1">Gated Fusion Network with Reprogramming Transformer Refiners for Adaptive Underwater Image Dehazing</h1>
+      <p class="is-size-5">Lyes Saad Saoud and Irfan Hussain</p>
+      <p class="is-size-5">Khalifa University of Science and Technology, UAE | Preprint 2025</p>
+
+      <div class="buttons is-centered">
+        <a href="https://arxiv.org/pdf/<ARXIV_PAPER_ID>.pdf" class="button is-dark is-rounded">
+          <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
+        </a>
+        <a href="https://github.com/LyesSaadSaoud/GFN_dehazing" class="button is-dark is-rounded">
+          <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser Image -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-centered">
+      <img src="static/images/GFN (1).png" alt="GFN system illustration" style="width: 70%; border-radius: 10px;">
+      <h2 class="subtitle">Architecture of the proposed underwater image dehazing model. The Gated Fusion Network (GFN) integrates a Swin
+ Transformer for multi-scale feature extraction and confidence map generation. Reprogramming Adaptive Transformation Units
+ (RATUs) apply targeted enhancements, including white balancing, gamma correction, and histogram equalization, based on the
+ confidence maps. The gated fusion mechanism selectively combines these enhanced features to produce a refined output with
+ improved contrast, color balance, and visibility across diverse underwater conditions.</h2>
+    </div>
+  </div>
+</section>
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Before and After Dehazing</h2>
+    <div class="columns is-multiline">
+      <!-- First Slider -->
+      <div class="column">
+        <div class="slider-container">
+          <div class="juxtapose uniform-slider" data-startingposition="50%">
+            <img src="static/images/before1.jpg" alt="Before Dehazing" data-label="Before">
+            <img src="static/images/after11.jpg" alt="After Dehazing" data-label="After">
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Slider -->
+      <div class="column">
+        <div class="slider-container">
+          <div class="juxtapose uniform-slider" data-startingposition="50%">
+            <img src="static/images/before2.jpg" alt="Before Dehazing" data-label="Before">
+            <img src="static/images/after22.jpg" alt="After Dehazing" data-label="After">
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Slider -->
+      <div class="column">
+        <div class="slider-container">
+          <div class="juxtapose uniform-slider" data-startingposition="50%">
+            <img src="static/images/before3.jpg" alt="Before Dehazing" data-label="Before">
+            <img src="static/images/after33.jpg" alt="After Dehazing" data-label="After">
+          </div>
+        </div>
+      </div>
+
+      <!-- Fourth Slider -->
+      <div class="column">
+        <div class="slider-container">
+          <div class="juxtapose uniform-slider" data-startingposition="50%">
+            <img src="static/images/before4.jpg" alt="Before Dehazing" data-label="Before">
+            <img src="static/images/after44.jpg" alt="After Dehazing" data-label="After">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Include JuxtaposeJS Library -->
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+
+
+<style>
+  /* Define slightly smaller dimensions for each slider */
+  .slider-container {
+    width: 100%; /* Full width of its parent container */
+    max-width: 450px; /* Reduced maximum width */
+    height: 300px; /* Reduced height */
+    margin: 10px auto; /* Center each slider with spacing */
+    position: relative;
+  }
+
+  /* Ensure images fill their containers */
+  .uniform-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preserve aspect ratio and fill container */
+  }
+
+  /* Grid layout for 2x2 matrix */
+  .columns.is-multiline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    grid-gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center each grid item */
+  }
+
+  .column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Make labels more prominent */
+  .juxtapose .jx-label {
+    font-size: 0px; /* Adjust label size for visibility */
+  }
+</style>
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <p>
+        <div class="content has-text-justified">
+          <p>
+        Underwater image quality degradation due to light absorption, scattering, and low illumination significantly hinders visual clarity and usability in critical applications such as marine research, robotics, and environmental monitoring. Standard enhancement techniques often struggle to generalize across varying underwater conditions, limiting their effectiveness in real-world applications. To overcome these challenges, we propose the Gated Fusion Network (GFN), a novel deep learning framework that integrates a Swin Transformer backbone with Reprogramming Adaptive Transformation Units (RATUs) to perform adaptive underwater image enhancement.
+GFN utilizes the Swin Transformer to extract multi-scale contextual features and generate confidence maps that guide RATUs in applying targeted image corrections, including white balancing, gamma correction, and histogram equalization. This adaptive processing ensures that enhancements are applied selectively based on local scene characteristics, effectively restoring color balance, contrast, and fine details. A gated fusion mechanism then selectively integrates these enhanced outputs, optimizing the overall visual quality while reducing noise and artifacts.
+Extensive evaluations on real-world underwater datasets demonstrate that GFN consistently outperforms existing approaches. On the EUVP dataset, GFN achieves an average PSNR improvement of 3.1 dB over WaterNet, with similar gains observed on ocean\_ex and LSUI400. These results establish a new benchmark for underwater image enhancement, offering a robust and adaptable solution for applications that require high-quality underwater imagery.
+For interactive visualizations, animations, source code, and access to the preprint, visit: https://lyessaadsaoud.github.io/GFN/.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div style="position: relative; max-width: 100%; text-align: center;">
+        <img src="static/images/RATU (1).png" alt="GFN system illustration" style="width: 70%; height: auto; border-radius: 10px;">
+      </div>
+      <h2 class="subtitle has-text-centered">
+        The proposed Reprogramming Adaptive Transformation Units (RATUs) for context-aware enhancement. The yellow
+ blocks indicate the new components introduced in our model
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Image Carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <!-- Image 1 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig5.png" alt="Comparative visual analysis of SOTA methods for LSUI400 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 5:</strong> A comparative visual analysis of SOTA methods for different images from the LSUI400 dataset. Left to right columns show the input image, compared to outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig6.png" alt="Comparative visual analysis of SOTA methods for ocean_ex dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 6:</strong> A comparative visual analysis of SOTA methods for different images from the ocean_ex dataset. Left to right columns show the Input image, Ground Truth, and outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig7.png" alt="Comparative visual analysis of SOTA methods for UIEB100 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 7:</strong> A comparative visual analysis of SOTA methods for different images from the UIEB100 dataset. Left to right columns show the Input image, Ground Truth, and outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig8.png" alt="Comparative visual analysis of SOTA methods for UPoor200 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 8:</strong> A comparative visual analysis of SOTA methods for different images from the UPoor200 dataset. Left to right columns show the Input image compared to outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig9.png" alt="Comparative visual analysis of SOTA methods for U45 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 9:</strong> A comparative visual analysis of SOTA methods for different images from the U45 dataset. Left to right columns show the Input image compared to outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Image 6 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig10.png" alt="Comparative visual analysis of SOTA methods for RUIE_Color90 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 10:</strong> A comparative visual analysis of SOTA methods for different images from the RUIE_Color90 dataset. Left to right columns show the Input image compared to outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Image 7 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig11.png" alt="Comparative visual analysis of SOTA methods for challenging-60 dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 11:</strong> A comparative visual analysis of SOTA methods for different images from the challenging-60 dataset. Left to right columns show the Input image compared to outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Image 8 -->
+        <div class="item">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+            <img src="static/images/Fig12.png" alt="Comparative visual analysis of SOTA methods for KUMP dataset" style="max-width: 80%; height: auto; border-radius: 10px;">
+            <h2 class="subtitle has-text-centered">
+              <strong>Figure 12:</strong> Comparative visual analysis of SOTA methods for selected images from the KUMP dataset. Left to right columns display the Input image and outputs of models such as UGAN Fabbri et al. (2018), FUnIEGAN Islam et al. (2020b), Cycle-GAN Zhu et al. (2017), PUGAN Cong et al. (2023), RAUNE-Net Peng et al. (2024), UT-UIE Peng et al. (2023b), WaterNet Li et al. (2019b), UTM-UIE, and our models, including CNN-RATU, GFN-FTU, and GFN.
+            </h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Image Carousel -->
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+@article{GFN2024,
+  author = {Saad Saoud, Lyes et al.},
+  title = {GFN: Gated Fusion Network for Underwater Image Enhancement},
+  year = {2024},
+  publisher = {Preprint},
+  doi = {......},
+  url = {https://arxiv.org/...}}
+</code></pre>
+  </div>
+</section>
+
+
+  
+<footer class="footer">
+  <div class="container">
+    <p>This page provides supplementary materials for "<strong>GFN: Gated Fusion Network for Underwater Image Enhancement</strong>." Access the paper, dataset, and code repository for more details.</p>
+  </div>
+</footer>
+
+</body>
+</html> 
