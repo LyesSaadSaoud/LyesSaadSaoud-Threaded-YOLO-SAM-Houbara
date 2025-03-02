@@ -24,7 +24,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>AI-Driven Robotic Semantic SLAM: Real-Time Depth and Adaptive Mapping for Autonomous Navigation in Complex Environments</title>
+  <title>Real-Time Threaded Houbara Detection and
+Segmentation for Wildlife Conservation using Mobile Platforms
+</title>
   <link rel="icon" type="image/x-icon" href="static/images/78357759.jpg">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -136,8 +138,12 @@
       </div>
 
       <h2 class="subtitle has-text-centered">
-        The framework integrates Depth Anything V2 for real-time dense depth estimation, CLIP for zero-shot semantic feature classification, and LLaMA for dynamic mapping adjustments. Depth Anything V2 generates consistent depth maps, while CLIP identifies contextual features (e.g., underwater scenes, clutter, reflective surfaces) to guide optimization. LLaMA refines SLAM parameters based on detected features and scene descriptions, enabling adaptability to dynamic environments such as underwater or cluttered scenarios. The integration of these components within SAFARI ensures robust 3D mapping, improved pose optimization, and enhanced scalability in complex conditions.
-      </h2>
+Real-time animal detection and segmentation in natural environments play an increasingly important role in wildlife conservation, enabling non-invasive monitoring via remote camera streams.
+        However, these tasks remain challenging due to computational constraints and the cryptic appearance of many animal species. address these limitations, we propose a two-stage deep learning framework optimized for mobile platforms, integrating a Threading Detection Model (TDM) to enable parallel processing of YOLOv10-based detection and MobileSAM-based segmentation. Unlike prior YOLO+SAM approaches, our method enhances real-time performance through task parallelization, reducing inference latency. 
+        Our approach employs YOLOv10 for precise animal detection and MobileSAM for efficient segmentation, leveraging threading techniques to process both tasks concurrently. 
+        This optimization significantly improves real-time performance on mobile devices by minimizing delays and optimizing resource utilization.
+We evaluate our framework on the Houbara Bustard, a conservation-priority bird species with a cryptic appearance. Our model achieves a mean average precision (mAP50) of 0.9627, mAP75 of 0.7731, and mAP95 of 0.7178 for detection, while MobileSAM attains a mean Intersection over Union (mIoU) of 0.7421 for segmentation. YOLOv10 processes frames in 43.7ms demonstrating its suitability for real-time applications. 
+To support our research, we introduce a comprehensive Houbara dataset comprising 40,000 images, addressing a critical gap in conservation AI resources. This dataset covers diverse scenarios, ensuring robust and generalizable model training. Beyond wildlife monitoring, our framework is applicable to real-time object detection and segmentation on resource-constrained devices. By overcoming the challenges associated with cryptic species detection, our work advances computer vision applications in animal behavior analysis and conservation.      </h2>
     </div>
   </div>
 </section>
