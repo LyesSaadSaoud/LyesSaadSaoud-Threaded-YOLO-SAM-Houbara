@@ -113,6 +113,42 @@
   padding: 0;
   display: block;
 }
+/* Video Grid: 2x2 Layout Without Any Vertical Space */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 0px; /* No space between videos */
+  padding: 0;
+  margin: 0 auto;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Video Wrapper to Ensure Proper Layout */
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Video Styling */
+.video-grid video {
+  width: 100%;
+  max-width: 220px; /* Adjust video size */
+  height: auto;
+  border-radius: 8px;
+  margin: 0;
+  display: block;
+}
+
+/* Label Styling */
+.label {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+  margin-top: 5px; /* Adds small spacing */
+}
 
 
   </style>
