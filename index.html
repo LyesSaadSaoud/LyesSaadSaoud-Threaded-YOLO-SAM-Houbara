@@ -2,288 +2,162 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta name="description" content="Real-Time Threaded Houbara Detection and Segmentation using Mobile Platforms">
+  <meta property="og:title" content="Real-Time Threaded Houbara Detection"/>
+  <meta property="og:description" content="A deep learning framework integrating YOLOv10 and MobileSAM with threading techniques for real-time Houbara Bustard detection and segmentation."/>
+  <meta property="og:url" content="https://lyessaadsaoud.github.io/Houbara_Detection"/>
+  <meta property="og:image" content="static/images/houbara_teaser.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
-
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-  <title>Real-Time Threaded Houbara Detection and
-Segmentation for Wildlife Conservation using Mobile Platforms
-</title>
-  <link rel="icon" type="image/x-icon" href="static/images/78357759.jpg">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <title>Real-Time Threaded Houbara Detection and Segmentation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/houbara_icon.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <style>
+    /* Center content and improve spacing */
+    .hero-body, .container {
+      text-align: center;
+    }
+    .publication-title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .publication-authors span {
+      font-size: 1.1rem;
+      display: inline-block;
+      margin: 5px;
+    }
+    /* Resize videos */
+    video {
+      width: 60%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin: 10px auto;
+      display: block;
+    }
+    /* Improve image styling */
+    img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 10px;
+      margin: 10px auto;
+      display: block;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  </style>
+
 </head>
 <body>
 
-
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Real-Time Threaded Houbara Detection and
-Segmentation for Wildlife Conservation using Mobile Platforms</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-  <a href="#" target="_blank">anonymous 1 </a>,</span>
-<span class="author-block">
-  
-<span class="author-block">
-  <a href="#" target="_blank">anonymous 2</a>
-</span>
-</div>
-
-<div class="is-size-5 publication-authors">
-  <span class="author-block">anonymous 3<br>Preprint 2025</span>
-  
-</div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/LyesSaadSaoud/SAFARI11" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-            </div>
+<!-- Title Section -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Real-Time Threaded Houbara Detection and Segmentation for Wildlife Conservation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="#" target="_blank">Lyes Saad Saoud</a>,</span>
+            <span class="author-block"><a href="#" target="_blank">Loïc Lesobre</a>,</span>
+            <span class="author-block"><a href="#" target="_blank">Enrico Sorato</a>,</span>
+            <span class="author-block"><a href="#" target="_blank">Saud Al Qaydi</a>,</span>
+            <span class="author-block"><a href="#" target="_blank">Yves Hingrat</a>,</span>
+            <span class="author-block"><a href="#" target="_blank">Lakmal Seneviratne</a>,</span>
+            <span class="author-block"><a href="#" target="_blank">Irfan Hussain</a></span>
           </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Khalifa University of Science and Technology, UAE<br>RENECO International Wildlife Consultants LLC, UAE<br>International Fund for Houbara Conservation (IFHC), UAE<br>Preprint 2025</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/<ARXIV_PAPER_ID>.pdf" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Paper</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a href="https://github.com/LyesSaadSaoud/Houbara_Detection" target="_blank"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon"><i class="fab fa-github"></i></span>
+              <span>Code</span>
+            </a>
+          </span>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- Teaser Image -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- Display Image -->
-      <div style="position: relative; max-width: 100%; text-align: center;">
-        <img 
-          src="images/main_IJCV.png" 
-          alt="Houbara Detection Segmentation" 
-          style="width: 70%; height: auto; border-radius: 10px;">
-      </div>
-
-      <h2 class="subtitle has-text-centered">
-Framework of the Proposed Two-Stage Deep Learning Approach for Houbara Detection and Segmentation, incorporating the Threading Detection Model (TDM). The figure illustrates the end-toend process starting from input images, through YOLOv10 for improved Houbara detection, followed by MobileSAM for specialized segmentation. The TDM manages parallel processing, task distribution, and synchronization to enhance real-time performance and efficiency throughout the system.   </div>
+      <img src="static/images/houbara_teaser.png" alt="Houbara Detection System">
+      <h2 class="subtitle">The proposed system integrates YOLOv10 and MobileSAM for real-time detection and segmentation of Houbara Bustards in diverse environments.</h2>
+    </div>
   </div>
 </section>
-<!-- End Teaser Image -->
 
-
-</section>
-<!-- End teaser video -->
+<!-- Video Section -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
-      <!-- Video 1 -->
-      <div class="column is-one-third has-text-centered">
-        <video controls width="40%">
-          <source src="images/Input_video_5fps_compressed.mp4" type="video/mp4">
+      <div class="column has-text-centered">
+        <video controls>
+          <source src="static/videos/video1.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
-        <p>Blueye navigating in the pool.</p>
+        <p>Houbara detection in desert terrain.</p>
       </div>
-
-     
-
-      <!-- Video 3 -->
-      <div class="column is-one-third has-text-centered">
-        <video controls width="40%">
-          <source src="images/Input_video_12fps_compressed.mp4" type="video/mp4">
+      <div class="column has-text-centered">
+        <video controls>
+          <source src="static/videos/video2.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
-        <p>The state of art maring pool.</p>
+        <p>Real-time segmentation of multiple birds.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Paper abstract -->
+<!-- Abstract Section -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-Real-time animal detection and segmentation in natural environments play an increasingly important role in wildlife conservation, enabling non-invasive monitoring via remote camera streams.
-        However, these tasks remain challenging due to computational constraints and the cryptic appearance of many animal species. address these limitations, we propose a two-stage deep learning framework optimized for mobile platforms, integrating a Threading Detection Model (TDM) to enable parallel processing of YOLOv10-based detection and MobileSAM-based segmentation. Unlike prior YOLO+SAM approaches, our method enhances real-time performance through task parallelization, reducing inference latency. 
-        Our approach employs YOLOv10 for precise animal detection and MobileSAM for efficient segmentation, leveraging threading techniques to process both tasks concurrently. 
-        This optimization significantly improves real-time performance on mobile devices by minimizing delays and optimizing resource utilization.
-We evaluate our framework on the Houbara Bustard, a conservation-priority bird species with a cryptic appearance. Our model achieves a mean average precision (mAP50) of 0.9627, mAP75 of 0.7731, and mAP95 of 0.7178 for detection, while MobileSAM attains a mean Intersection over Union (mIoU) of 0.7421 for segmentation. YOLOv10 processes frames in 43.7ms demonstrating its suitability for real-time applications. 
-To support our research, we introduce a comprehensive Houbara dataset comprising 40,000 images, addressing a critical gap in conservation AI resources. This dataset covers diverse scenarios, ensuring robust and generalizable model training. Beyond wildlife monitoring, our framework is applicable to real-time object detection and segmentation on resource-constrained devices. By overcoming the challenges associated with cryptic species detection, our work advances computer vision applications in animal behavior analysis and conservation.      </h2>
-      </div>
-    </div>
+    <h2 class="title is-3">Abstract</h2>
+    <p class="content has-text-justified">
+      Real-time animal detection and segmentation play a crucial role in wildlife conservation. Our approach integrates YOLOv10 for object detection and MobileSAM for segmentation, with a threading-based model for improved efficiency. The system achieves high accuracy (mAP50 = 0.9627, mIoU = 0.7421) while enabling real-time performance on mobile devices. We introduce a curated dataset of 40,000 images for conservation AI applications.
+    </p>
   </div>
 </section>
-<!-- End paper abstract -->
-<!-- Results Section -->
-<!-- Image Carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
 
-        <!-- Image 3 -->
-        <div class="item">
-          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-            <img src="static/images/Fig3.png" alt="Visualization of input images, dehazed outputs, and corresponding depth maps" style="max-width: 80%; height: auto; border-radius: 10px;">
-            <h2 class="subtitle has-text-centered">
-              <strong>Fig. 3:</strong> Framework of the Proposed Two-Stage Deep Learning Approach for Houbara Detection and Segmentation, incorporating the Threading Detection Model (TDM). The figure illustrates the end-toend process starting from input images, through YOLOv10 for improved Houbara detection, followed by MobileSAM for specialized segmentation. The TDM manages parallel processing, task distribution, and synchronization to enhance real-time performance and efficiency throughout the system..
-            </h2>
-          </div>
-        </div>
-
-        <!-- Image 4 -->
-        <div class="item">
-          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-            <img src="static/images/Fig4.png" alt="Visualization of the estimated trajectory within the pool environment" style="max-width: 80%; height: auto; border-radius: 10px;">
-            <h2 class="subtitle has-text-centered">
-              <strong>Fig. 4:</strong>.
-            </h2>
-          </div>
-        </div>
-
-        
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Image Carousel -->
-
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>
-  @article{Paper,
-  author = {anonymous and et al.},
-  title = {..},
-  year = {2025},
-  publisher = {TRO},
-  doi = {......},
-  url = {https://doi.org/.....}}
-        
-  @misc{Dataset,
-  author = {anonymous and et al.},
-  title = {....},
-  year = {2025},
-  publisher = {},
-  version = {V1},
-  doi = {xxx},
-  url = {https://doi.org/....}}
-  
-        
-      </code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-<!-- Updated Footer -->
+<!-- Footer -->
 <footer class="footer">
   <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This page provides supplementary materials for the study "<strong>Semantic-Aware SLAM Framework for Dynamic Environments</strong>." 
-For additional details, please refer to the <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank">arXiv version of the paper</a> or download the 
-<a href="https://www.mendeley.com/" target="_blank">dataset and annotations</a>. 
-The code repository for implementation and replication of results can be found on <a href="https://github.com/LyesSaadSaoud/SAFARI" target="_blank">GitHub</a>.
-
-          </p>
-          <p>
-          </p>
-        </div>
-      </div>
-    </div>
+    <p>For details, refer to our <a href="https://arxiv.org/pdf/<ARXIV_PAPER_ID>.pdf" target="_blank">paper</a> and <a href="https://github.com/LyesSaadSaoud/Houbara_Detection" target="_blank">GitHub repository</a>.</p>
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
