@@ -44,15 +44,16 @@
     }
     /* Resize videos */
     video {
-      width: 60%;
-      max-width: 600px;
+      width: 90%;
+      max-width: 320px;
       border-radius: 10px;
       margin: 10px auto;
       display: block;
     }
-    /* Improve image styling */
+    /* Reduce image size */
     img {
-      max-width: 80%;
+      width: 50%;
+      max-width: 500px;
       height: auto;
       border-radius: 10px;
       margin: 10px auto;
@@ -95,16 +96,6 @@
                 <span>Paper</span>
               </a>
             </span>
-            <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/LyesSaadSaoud/SAFA1" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-           
-                  </a>
-                </span>
             <span class="link-block">
               <a href="https://github.com/LyesSaadSaoud/Houbara_Detection" target="_blank"
               class="external-link button is-normal is-rounded is-dark">
@@ -128,23 +119,44 @@
   </div>
 </section>
 
-<!-- Video Section -->
+<!-- Video Section (4x4 Grid Layout) -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column has-text-centered">
+    <div class="columns is-multiline is-centered">
+      <!-- Video 1 -->
+      <div class="column is-one-quarter has-text-centered">
         <video controls>
           <source src="images/Input_video_5fps_compressed.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <p>Houbara detection in desert terrain.</p>
       </div>
-      <div class="column has-text-centered">
+
+      <!-- Video 2 -->
+      <div class="column is-one-quarter has-text-centered">
         <video controls>
-          <source src="images/Input_video_5fps.mp4" type="video/mp4">
+          <source src="images/video_5fps_compressed.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <p>Real-time segmentation of multiple birds.</p>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="column is-one-quarter has-text-centered">
+        <video controls>
+          <source src="images/Input_video_12fps.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p>Threading Model Efficiency.</p>
+      </div>
+
+      <!-- Video 4 -->
+      <div class="column is-one-quarter has-text-centered">
+        <video controls>
+          <source src="images/segmentation_test.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p>Houbara Bustard Multi-Segmentation.</p>
       </div>
     </div>
   </div>
