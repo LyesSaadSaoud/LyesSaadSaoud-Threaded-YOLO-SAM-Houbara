@@ -28,7 +28,7 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 
- <style>
+  <style>
     /* Center content and improve spacing */
     .hero-body, .container {
       text-align: center;
@@ -44,11 +44,10 @@
     }
     /* Resize videos */
     video {
-      width: 90%;
-      max-width: 320px;
+      width: 100%;
+      max-width: 300px;
       border-radius: 10px;
       margin: 10px auto;
-      display: block;
     }
     /* Reduce image size */
     img {
@@ -61,6 +60,21 @@
     }
     .subtitle {
       font-size: 1.2rem;
+    }
+    /* Arrange videos in a 2x2 grid */
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      justify-items: center;
+      align-items: center;
+    }
+    /* Style for buttons */
+    .publication-links {
+      margin-top: 15px;
+    }
+    .publication-links a {
+      margin: 5px;
     }
   </style>
 
@@ -84,25 +98,23 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Khalifa University of Science and Technology, UAE<br>RENECO International Wildlife Consultants LLC, UAE<br>Preprint 2025</span>
+            <span class="author-block">Khalifa University of Science and Technology, UAE<br>RENECO International Wildlife Consultants LLC, UAE<br><strong>Preprint 2025</strong></span>
           </div>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/<ARXIV_PAPER_ID>.pdf" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                <span>Paper</span>
-              </a>
-            </span>
-            <span class="link-block">
-              <a href="https://github.com/LyesSaadSaoud/Houbara_Detection" target="_blank"
-              class="external-link button is-normal is-rounded is-dark">
-              <span class="icon"><i class="fab fa-github"></i></span>
-              <span>Code</span>
+          <!-- Buttons for Paper & Code -->
+          <div class="publication-links">
+            <a href="https://arxiv.org/pdf/<ARXIV_PAPER_ID>.pdf" target="_blank"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon"><i class="fas fa-file-pdf"></i></span>
+            <span>Paper</span>
             </a>
-          </span>
+
+            <a href="https://github.com/LyesSaadSaoud/Houbara_Detection" target="_blank"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon"><i class="fab fa-github"></i></span>
+            <span>Code</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -119,12 +131,12 @@
   </div>
 </section>
 
-<!-- Video Section (4x4 Grid Layout) -->
+<!-- Video Section (2x2 Grid Layout) -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <div class="columns is-multiline is-centered">
+    <div class="video-grid">
       <!-- Video 1 -->
-      <div class="column is-one-quarter has-text-centered">
+      <div>
         <video controls>
           <source src="images/Input_video_5fps_compressed.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -133,7 +145,7 @@
       </div>
 
       <!-- Video 2 -->
-      <div class="column is-one-quarter has-text-centered">
+      <div>
         <video controls>
           <source src="images/video_5fps_compressed.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -142,7 +154,7 @@
       </div>
 
       <!-- Video 3 -->
-      <div class="column is-one-quarter has-text-centered">
+      <div>
         <video controls>
           <source src="images/Input_video_12fps.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -151,7 +163,7 @@
       </div>
 
       <!-- Video 4 -->
-      <div class="column is-one-quarter has-text-centered">
+      <div>
         <video controls>
           <source src="images/segmentation_test.mp4" type="video/mp4">
           Your browser does not support the video tag.
