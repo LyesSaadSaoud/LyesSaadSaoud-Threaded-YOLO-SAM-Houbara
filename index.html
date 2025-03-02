@@ -201,49 +201,94 @@
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <h2 class="title has-text-centered">Demo Videos</h2>
-    
-    <!-- Video Grid with Labels -->
-    <div class="video-grid">
+
+    <div class="video-container">
+      <!-- First Row (Without using TDM) -->
+      <div class="video-row">
+        <div class="video-wrapper">
+          <video autoplay loop muted playsinline>
+            <source src="images/Input_video_5fps_compressed.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="video-wrapper">
+          <video autoplay loop muted playsinline>
+            <source src="images/video_5fps_compressed.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
       
-      <!-- Video 1 -->
-      <div class="video-wrapper">
-        <video autoplay loop muted playsinline>
-          <source src="images/Input_video_5fps_compressed.mp4" type="video/mp4">
-        </video>
+      <!-- Label Row for First Row -->
+      <div class="label-row">
+        <div class="label">Without using TDM</div>
+        <div class="label">Without using TDM</div>
       </div>
 
-      <!-- Video 2 -->
-      <div class="video-wrapper">
-        <video autoplay loop muted playsinline>
-          <source src="images/video_5fps_compressed.mp4" type="video/mp4">
-        </video>
+      <!-- Second Row (Using TDM) -->
+      <div class="video-row">
+        <div class="video-wrapper">
+          <video autoplay loop muted playsinline>
+            <source src="images/Input_video_12fps_compressed.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="video-wrapper">
+          <video autoplay loop muted playsinline>
+            <source src="images/video_12fps_compressed.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
 
-      <!-- Label for First Row -->
-      <div class="label">Without using TDM</div>
-      <div class="label">Without using TDM</div>
-
-      <!-- Video 3 -->
-      <div class="video-wrapper">
-        <video autoplay loop muted playsinline>
-          <source src="images/Input_video_12fps_compressed.mp4" type="video/mp4">
-        </video>
+      <!-- Label Row for Second Row -->
+      <div class="label-row">
+        <div class="label">Using TDM</div>
+        <div class="label">Using TDM</div>
       </div>
-
-      <!-- Video 4 -->
-      <div class="video-wrapper">
-        <video autoplay loop muted playsinline>
-          <source src="images/video_12fps_compressed.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <!-- Label for Second Row -->
-      <div class="label">Using TDM</div>
-      <div class="label">Using TDM</div>
 
     </div>
   </div>
 </section>
+
+<!-- CSS Styling -->
+<style>
+  /* Center Content */
+  .video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Style for Video Rows */
+  .video-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Small space between videos */
+    margin-bottom: 5px; /* Small space before labels */
+  }
+
+  /* Adjust Video Size */
+  .video-wrapper video {
+    width: 100%;
+    max-width: 220px; /* Small video size */
+    border-radius: 8px;
+    display: block;
+  }
+
+  /* Label Row */
+  .label-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* Label Styling */
+  .label {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    width: 220px; /* Match video width */
+  }
+</style>
 
 
 
