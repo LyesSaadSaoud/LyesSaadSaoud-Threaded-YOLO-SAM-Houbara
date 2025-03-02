@@ -1,93 +1,76 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Real-Time Threaded Houbara Detection and Segmentation using Mobile Platforms">
-  <meta property="og:title" content="Real-Time Threaded Houbara Detection"/>
-  <meta property="og:description" content="A deep learning framework integrating YOLOv10 and MobileSAM with threading techniques for real-time Houbara Bustard detection and segmentation."/>
-  <meta property="og:url" content="https://lyessaadsaoud.github.io/Houbara_Detection"/>
-  <meta property="og:image" content="static/images/houbara_teaser.png" />
+  <meta name="description" content="Gated Fusion Network with Reprogramming Transformer Refiners for Adaptive Underwater Image Dehazing">
+  <meta property="og:title" content="Gated Fusion Network for Underwater Image Enhancement"/>
+  <meta property="og:description" content="GFN integrates advanced feature fusion and context-aware adaptive transformations for superior underwater imaging."/>
+  <meta property="og:image" content="static/images/GFN (1).png" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Real-Time Threaded Houbara Detection and Segmentation</title>
-  <link rel="icon" type="image/x-icon" href="static/images/houbara_icon.jpg">
+  <title>Gated Fusion Network with Reprogramming Transformer Refiners for Adaptive Underwater Image Dehazing</title>
+  <link rel="icon" type="image/x-icon" href="static/images/78357759.jpg">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
+  <!-- Bulma CSS & Other Styles -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-
+  
+  <!-- JavaScript Libraries -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
 
   <style>
-    /* Center content and improve spacing */
-    .hero-body, .container {
-      text-align: center;
-    }
-    .publication-title {
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    .publication-authors span {
-      font-size: 1.1rem;
+    /* Prevents unwanted word wrapping on section titles */
+    h2.title {
       display: inline-block;
-      margin: 5px;
+      text-align: center;
+      white-space: nowrap;
+      word-break: normal;
+      overflow-wrap: break-word;
     }
-    /* Resize videos */
-    video {
+
+    /* Ensures paragraphs do not break into vertical letters */
+    .content p {
+      text-align: justify;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* Ensures titles and text stay in a horizontal layout */
+    .column {
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Limits container width to prevent excessive wrapping */
+    .container.is-max-desktop {
+      max-width: 1100px;
+    }
+
+    /* Carousel Styling */
+    .carousel {
       width: 100%;
-      max-width: 250px;  /* Adjust size */
-      border-radius: 10px;
-      display: block;
+      max-width: 900px;
+      margin: auto;
     }
-    /* Reduce image size */
-    img {
-      width: 50%;
-      max-width: 500px;
+
+    .carousel img {
+      width: 100%;
       height: auto;
       border-radius: 10px;
-      margin: 10px auto;
-      display: block;
-    }
-    .subtitle {
-      font-size: 1.2rem;
-    }
-    /* Arrange videos in a 2x2 grid */
-    .video-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0px; /* Remove space between videos */
-      justify-items: center;
-      align-items: center;
-    }
-    /* Style for buttons */
-    .buttons {
-      margin-top: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-    }
-    .button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      padding: 10px 15px;
     }
   </style>
-
-  <script>
-    // Ensure all videos start together
-    document.addEventListener("DOMContentLoaded", function() {
-      let videos = document.querySelectorAll("video");
-      videos.forEach(video => {
-        video.play();
-      });
-    });
-  </script>
-
 </head>
+
 <body>
 
 <!-- Title Section -->
