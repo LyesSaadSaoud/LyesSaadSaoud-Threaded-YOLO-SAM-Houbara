@@ -29,50 +29,41 @@
   <script src="static/js/index.js"></script>
 
  <style>
-    /* Prevents unwanted word wrapping on section titles */
-    h2.title {
-      display: inline-block;
+    /* Center content and improve spacing */
+    .hero-body, .container {
       text-align: center;
-      white-space: nowrap;
-      word-break: normal;
-      overflow-wrap: break-word;
     }
-
-    /* Ensures paragraphs do not break into vertical letters */
-    .content p {
-      text-align: justify;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
+    .publication-title {
+      font-size: 2rem;
+      font-weight: bold;
     }
-
-    /* Ensures titles and text stay in a horizontal layout */
-    .column {
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .publication-authors span {
+      font-size: 1.1rem;
+      display: inline-block;
+      margin: 5px;
     }
-
-    /* Limits container width to prevent excessive wrapping */
-    .container.is-max-desktop {
-      max-width: 1100px;
+    /* Resize videos */
+    video {
+      width: 60%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin: 10px auto;
+      display: block;
     }
-
-    /* Carousel Styling */
-    .carousel {
-      width: 100%;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .carousel img {
-      width: 100%;
+    /* Improve image styling */
+    img {
+      max-width: 80%;
       height: auto;
       border-radius: 10px;
+      margin: 10px auto;
+      display: block;
+    }
+    .subtitle {
+      font-size: 1.2rem;
     }
   </style>
-</head>
 
+</head>
 <body>
 
 <!-- Title Section -->
