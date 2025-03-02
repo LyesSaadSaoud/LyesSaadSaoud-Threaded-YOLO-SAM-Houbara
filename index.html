@@ -28,42 +28,51 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 
-  <style>
-    /* Center content and improve spacing */
-    .hero-body, .container {
-      text-align: center;
-    }
-    .publication-title {
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    .publication-authors span {
-      font-size: 1.1rem;
+ <style>
+    /* Prevents unwanted word wrapping on section titles */
+    h2.title {
       display: inline-block;
-      margin: 5px;
+      text-align: center;
+      white-space: nowrap;
+      word-break: normal;
+      overflow-wrap: break-word;
     }
-    /* Resize videos */
-    video {
-      width: 60%;
-      max-width: 600px;
-      border-radius: 10px;
-      margin: 10px auto;
-      display: block;
+
+    /* Ensures paragraphs do not break into vertical letters */
+    .content p {
+      text-align: justify;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
-    /* Improve image styling */
-    img {
-      max-width: 80%;
+
+    /* Ensures titles and text stay in a horizontal layout */
+    .column {
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Limits container width to prevent excessive wrapping */
+    .container.is-max-desktop {
+      max-width: 1100px;
+    }
+
+    /* Carousel Styling */
+    .carousel {
+      width: 100%;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .carousel img {
+      width: 100%;
       height: auto;
       border-radius: 10px;
-      margin: 10px auto;
-      display: block;
-    }
-    .subtitle {
-      font-size: 1.2rem;
     }
   </style>
-
 </head>
+
 <body>
 
 <!-- Title Section -->
